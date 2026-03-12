@@ -6,7 +6,8 @@
   <title>Modern Clothing Store</title>
   <style>
     body {font-family: 'Helvetica Neue', Arial, sans-serif; margin:0; padding:0; background:#333; color:#fff;}
-    header {background:#000; color:#fff; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center;}
+    header {background:#000; color:#fff; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position: relative;}
+    nav { display: flex; }
     nav a {color:#fff; margin:0 1rem; text-decoration:none;}
     .hero {background:url('') center/cover no-repeat; height:60vh; display:flex; align-items:center; justify-content:center; color:#fff; text-shadow:0 0 10px rgba(0,0,0,0.5;}
     .hero h1 {font-size:3rem; margin:0;}
@@ -32,6 +33,7 @@
     @media (max-width: 480px) {
       .menu-icon { display: block; }
       nav { display: none; }
+      nav.active { display: flex; flex-direction: column; }
     }
   </style>
 </head>
@@ -153,6 +155,10 @@
   <script>
     const currentYear = new Date().getFullYear();
     document.querySelector('footer').innerHTML = `&copy; ${currentYear} StyleHub. All rights reserved.`;
+    document.querySelector('.menu-icon').addEventListener('click', function() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    });
   </script>
 </body>
 </html>
