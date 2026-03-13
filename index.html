@@ -17,7 +17,8 @@
     .hero {background:url('') center/cover no-repeat; height:60vh; display:flex; align-items:center; justify-content:center; color:#fff; text-shadow:0 0 10px rgba(0,0,0,0.5);}
     .hero h1 {font-size:3rem; margin:0;}
     .products {padding:2rem; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem; max-width:1200px; margin:auto;}
-    .product {background:#222; border:1px solid #333; border-radius:8px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+    .product {background:#222; border:1px solid #333; border-radius:8px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;}
+    .product:hover { transform: scale(1.05); }
     .product img {width:100%; height:200px; object-fit:cover;}
     .product-info {padding:1rem; text-align:center;}
     .product-info h3 {margin:0.5rem 0 0.3rem;}
@@ -53,98 +54,98 @@
   </section>
   <section class='products'>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/t-shirt-1869740_1280.jpg' alt='T-Shirt'>
+      <img src='https://example.com/new-tshirt.jpg' alt='T-Shirt'>
       <div class='product-info'>
         <h3>Classic White T‑Shirt</h3>
         <p>$19.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/jeans-1869741_1280.jpg' alt='Jeans'>
+      <img src='https://example.com/new-jeans.jpg' alt='Jeans'>
       <div class='product-info'>
         <h3>Slim Fit Jeans</h3>
         <p>$49.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/jacket-1869742_1280.jpg' alt='Jacket'>
+      <img src='https://example.com/new-jacket.jpg' alt='Jacket'>
       <div class='product-info'>
         <h3>Leather Jacket</h3>
         <p>$149.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/sweater-1869743_1280.jpg' alt='Sweater'>
+      <img src='https://example.com/new-sweater.jpg' alt='Sweater'>
       <div class='product-info'>
         <h3>Cozy Knit Sweater</h3>
         <p>$39.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/shorts-1869744_1280.jpg' alt='Shorts'>
+      <img src='https://example.com/new-shorts.jpg' alt='Shorts'>
       <div class='product-info'>
         <h3>Casual Summer Shorts</h3>
         <p>$29.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/dress-1869745_1280.jpg' alt='Dress'>
+      <img src='https://example.com/new-dress.jpg' alt='Dress'>
       <div class='product-info'>
         <h3>Elegant Evening Dress</h3>
         <p>$89.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/skirt-1869746_1280.jpg' alt='Skirt'>
+      <img src='https://example.com/new-skirt.jpg' alt='Skirt'>
       <div class='product-info'>
         <h3>Floral Midi Skirt</h3>
         <p>$34.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/blazer-1869747_1280.jpg' alt='Blazer'>
+      <img src='https://example.com/new-blazer.jpg' alt='Blazer'>
       <div class='product-info'>
         <h3>Stylish Blazer</h3>
         <p>$99.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/sneakers-1869748_1280.jpg' alt='Sneakers'>
+      <img src='https://example.com/new-sneakers.jpg' alt='Sneakers'>
       <div class='product-info'>
         <h3>Comfortable Sneakers</h3>
         <p>$59.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/hat-1869749_1280.jpg' alt='Hat'>
+      <img src='https://example.com/new-hat.jpg' alt='Hat'>
       <div class='product-info'>
         <h3>Trendy Baseball Cap</h3>
         <p>$24.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/scarf-1869750_1280.jpg' alt='Scarf'>
+      <img src='https://example.com/new-scarf.jpg' alt='Scarf'>
       <div class='product-info'>
         <h3>Warm Winter Scarf</h3>
         <p>$19.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/belt-1869751_1280.jpg' alt='Belt'>
+      <img src='https://example.com/new-belt.jpg' alt='Belt'>
       <div class='product-info'>
         <h3>Classic Leather Belt</h3>
         <p>$29.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/socks-1869752_1280.jpg' alt='Socks'>
+      <img src='https://example.com/new-socks.jpg' alt='Socks'>
       <div class='product-info'>
         <h3>Comfort Crew Socks</h3>
         <p>$9.99</p>
       </div>
     </div>
     <div class='product'>
-      <img src='https://cdn.pixabay.com/photo/2016/11/29/09/24/pajamas-1869753_1280.jpg' alt='Pajamas'>
+      <img src='https://example.com/new-pajamas.jpg' alt='Pajamas'>
       <div class='product-info'>
         <h3>Soft Cotton Pajamas</h3>
         <p>$39.99</p>
