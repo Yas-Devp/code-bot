@@ -6,11 +6,10 @@
   <title>Modern Clothing Store</title>
   <style>
     body {font-family: 'Helvetica Neue', Arial, sans-serif; margin:0; padding:0; background:#333; color:#fff;}
-    header {background:#000; color:#fff; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position: relative;}
+    header {background:#000; color:#fff; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;}
     nav { display: flex; }
     .menu-icon{
      display: none;
-     font-size: 2rem;
      cursor: pointer;
     }
     nav a {color:#fff; margin:0 1rem; text-decoration:none;}
@@ -38,18 +37,32 @@
 
     /* Animation for menu icon */
     .menu-icon span {
-      display: inline-block;
-      transition: transform 0.3s;
+      display: block;
+      width: 30px;
+      height: 4px;
+      background-color: white;
+      margin: 5px 0;
+      transition: all 0.3s ease;
     }
-    .menu-icon span.clicked {
-      transform: rotate(90deg);
+    .menu-icon span.clicked:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-icon span.clicked:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-icon span.clicked:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
     }
   </style>
 </head>
 <body>
   <header>
     <div class='logo'><strong>StyleHub</strong></div>
-    <div class='menu-icon'><span>&#9776;</span></div>
+    <div class='menu-icon'>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
       <a href='#'>Home</a>
       <a href='#'>Shop</a>
@@ -167,8 +180,8 @@
     document.querySelector('.menu-icon').addEventListener('click', function() {
       const nav = document.querySelector('nav');
       nav.classList.toggle('active');
-      const span = document.querySelector('.menu-icon span');
-      span.classList.toggle('clicked');
+      const spans = document.querySelectorAll('.menu-icon span');
+      spans.forEach(span => span.classList.toggle('clicked'));
     });
   </script>
 </body>
