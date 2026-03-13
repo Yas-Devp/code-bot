@@ -36,12 +36,20 @@
       .product-info { padding: 0.8rem; }
     }
 
+    /* Animation for menu icon */
+    .menu-icon span {
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+    .menu-icon span.clicked {
+      transform: rotate(90deg);
+    }
   </style>
 </head>
 <body>
   <header>
     <div class='logo'><strong>StyleHub</strong></div>
-    <div class='menu-icon'>&#9776;</div>
+    <div class='menu-icon'><span>&#9776;</span></div>
     <nav>
       <a href='#'>Home</a>
       <a href='#'>Shop</a>
@@ -159,6 +167,8 @@
     document.querySelector('.menu-icon').addEventListener('click', function() {
       const nav = document.querySelector('nav');
       nav.classList.toggle('active');
+      const span = document.querySelector('.menu-icon span');
+      span.classList.toggle('clicked');
     });
   </script>
 </body>
